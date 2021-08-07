@@ -1,0 +1,39 @@
+.husbandContainer {
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgb(71, 71, 71);
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: white;
+        align-items: center;
+        min-width: 40px;
+}
+
+.husband {
+    width: 12%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    border: 1px solid rgb(143, 31, 31);
+    border-radius: 25px;
+    box-shadow: 2px 2px;
+}
+
+.radioButton {
+        border: none;
+        display: flex;
+        justify-content: center;
+
+}
+
+
+.submitButton {
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+
+}
