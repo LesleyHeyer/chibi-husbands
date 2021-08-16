@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import style from './husband.module.css';
 
 
-const Husband = ({name, images, information, yes, no}) => {
+const Husband = ({name, images, information, yes, no, submit, setSubmit}) => {
 
-  // const [submit, setSubmit] = useState([]);
+  const getSubmit = e => {
+    e.preventDefault();
+    setSubmit(submitChoice(e));
+  }
 
-  // const submitChoice = e => {
-  //   if(value === "yes"){
-  //     return yes;
-  //   } else {
-  //       e.alert("are you sure?");
-  //       no;
-  //   }
-  // };
+  const submitChoice = e => {
+    if(e.target.value === "yes"){
+      return yes;
+    } else {
+        window.alert("are you sure?");
+        return no;
+    }
+  };
 
-  // const getSubmit = e => {
-  //   e.preventDefault();
-  //   setSubmit();
-  // }
 
     return(
-        <div>
         <div className={style.husbandContainer}>
             <h1>{name}</h1>
             <ol>
@@ -33,21 +32,22 @@ const Husband = ({name, images, information, yes, no}) => {
             <p>Would You Marry Him?</p>
             <div className="form">
                 <form>
-                    <div className={style.radioButtom}>
+                    <div className={style.radioButton}>
                     <input type="radio" id="yes" name="husband" value="yes"/>
                     <label for="yes">Yes</label>
                     <input type="radio" id="no" name="husband" value="no"/>
                     <label for="no">No</label>
+                    </div>
                     <br />
-                    <button className={style.submitButton} type="submit">Make Your Choice</button>
+                    <div>
+                    <button className={style.submitButton} type="submit" onClick={(e) => getSubmit(e)}>Will he say yes?</button><br />
                     </div>
                 </form>
             <div>
-                <p>His Answer: {}</p>
+                <p>His Answer: {submitChoice}</p> 
             </div>
             </div>
             <br/>
-        </div>
         </div>
     );
 

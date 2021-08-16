@@ -19,7 +19,7 @@ function App() {
     },
     {name: "Azibo",
     husbandPhoto: "../images/ChibiHusband-Azibo.png",
-    info: ["He's adorable", "He's a family man", "He's can catch dinner"],
+    info: ["He's adorable", "He's a family man", "He's can catch dinner... literally"],
     yesResponse: "Yaaay!! When!? When!?",
     noResponse: "*cries*"
     },
@@ -43,7 +43,7 @@ function App() {
     },
     {name: "Riel",
     husbandPhoto: "../images/ChibiHusband-Riel.png",
-    info: ["He'll hire a maid to clean", "He's got a big heart", "He'll buy dinner"],
+    info: ["He'll hire a maid to clean", "He's got a big heart", "He'll buy dinner?"],
     yesResponse: "You got it!",
     noResponse: "I'll make Ramen if that'll convince you."
     },
@@ -55,6 +55,8 @@ function App() {
     }
   ];
 
+  const [submit, setSubmit] = useState();
+
 
   return (
     <div className="App">
@@ -62,19 +64,24 @@ function App() {
        <img src='./images/ChibiHusbands-Title.png' />
     </header> 
     <body>
-      <div className="theHusbands">
+      <div className="husbandContainer">
       {husbands.map(husband => (
          <Husband 
-         key ={husband.name} 
+         key={husband.name} 
          name={husband.name} 
          images={husband.husbandPhoto}
          information={husband.info}
          yes={husband.yesResponse}
          no={husband.noResponse}
+         setSubmit={setSubmit}
          />
       ))}
       </div>
-
+      <div>
+        {/* <form>
+        <button class="submitButton" type="submit">Make Your Choice</button><br />
+        </form> */}
+      </div>
     </body>
     <footer>
       <p>No More Chibi Husbands! Sorry!!</p>
