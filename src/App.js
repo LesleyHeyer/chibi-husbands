@@ -55,7 +55,7 @@ function App() {
     }
   ];
 
-  const [submit, setSubmit] = useState();
+  const [state, setState] = useState('');
 
 
   return (
@@ -73,7 +73,8 @@ function App() {
          information={husband.info}
          yes={husband.yesResponse}
          no={husband.noResponse}
-         setSubmit={setSubmit}
+         setState={setState}
+         state={state}
          />
       ))}
       </div>

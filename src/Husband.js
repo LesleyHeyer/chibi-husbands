@@ -3,18 +3,50 @@ import React from 'react';
 import style from './husband.module.css';
 
 
-const Husband = ({name, images, information, yes, no, submit, setSubmit}) => {
+const Husband = ({name, images, information, yes, no, state, setState}) => {
 
-  const getSubmit = e => {
+  // const getSubmit = (e) => {
+  //   setSubmit(e.target.value);
+  //   e.preventDefault();
+  // }
+
+  // const getSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   setSubmit([
+  //     ...submit,
+  //     {choice: e.target.value, id: name},
+  //   ]);
+
+  //   if(e.target.value === "yes"){
+  //     window.alert('you pressed yes');
+  //     return yes;
+  //   } else {
+  //       window.alert("you pressed no");
+  //       return no;
+  //   }
+  // };
+
+
+
+  // const formSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(state)
+  // }
+
+  const formSubmit = (e) => {
     e.preventDefault();
-    setSubmit(submitChoice(e));
-  }
 
-  const submitChoice = e => {
+    setState([
+      ...state,
+      {choice: e.target.value, id: name},
+    ]);
+
     if(e.target.value === "yes"){
+      window.alert('you pressed yes');
       return yes;
     } else {
-        window.alert("are you sure?");
+        window.alert("you pressed no");
         return no;
     }
   };
@@ -33,18 +65,40 @@ const Husband = ({name, images, information, yes, no, submit, setSubmit}) => {
             <div className="form">
                 <form>
                     <div className={style.radioButton}>
-                    <input type="radio" id="yes" name="husband" value="yes"/>
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="husband" value="no"/>
-                    <label for="no">No</label>
+                    <label for="yes">
+                      <input 
+                        type="radio" 
+                        checked={state === "yes"}
+                        onChange={(e) => { setState(e.target.value) }}
+                        name="husband" 
+                        value="yes"
+                      />
+                        Yes
+                    </label>
+                    <label for="no">
+                      <input 
+                        type="radio" 
+                        checked={state === "no"}
+                        onChange={(e) => { setState(e.target.value) }}
+                        name="husband" 
+                        value="no"
+                      />
+                        No
+                    </label>
                     </div>
                     <br />
                     <div>
-                    <button className={style.submitButton} type="submit" onClick={(e) => getSubmit(e)}>Will he say yes?</button><br />
+                    <button 
+                      className={style.submitButton} 
+                      type="submit" 
+                      onSubmit={(e) => (formSubmit(e))}>
+                        Will he say yes?
+                      </button>
+                      <br />
                     </div>
                 </form>
             <div>
-                <p>His Answer: {submitChoice}</p> 
+                <p>Radio Button Is : {state}</p> 
             </div>
             </div>
             <br/>
