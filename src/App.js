@@ -4,7 +4,7 @@ import Husband from './Husband';
 
 function App() {
 
-  const husbands = [
+  const husbandsArray = [
     {name: "Cross",
     husbandPhoto: "../images/ChibiHusband-Cross.png",
     info: ["He's amazing", "He's kind of immortal", "He's a good choice"],
@@ -55,7 +55,7 @@ function App() {
     }
   ];
 
-  const [state, setState] = useState('');
+  const [husbands, setHusbands] = useState(husbandsArray);
 
 
   return (
@@ -73,8 +73,8 @@ function App() {
          information={husband.info}
          yes={husband.yesResponse}
          no={husband.noResponse}
-         setState={setState}
-         state={state}
+         setHusbands={setHusbands}
+         husbands={husbands}
          />
       ))}
       </div>
