@@ -7,7 +7,7 @@ function App() {
   const husbandsArray = [
     {name: "Cross",
     husbandPhoto: "../images/ChibiHusband-Cross.png",
-    info: ["He's amazing", "He's kind of immortal", "He's a good choice"],
+    info: ["He's amazing", "He's a Vampire", "He's a gentleman of fine taste (in you)"],
     yesResponse: "Wise decision, I accept you as well.",
     noResponse: "No worries, my dear.  I'm patient."
     },
@@ -15,17 +15,17 @@ function App() {
     husbandPhoto: "../images/ChibiHusband-Sergio.png",
     info: ["He's kind", "He's a shy boy", "He's devoted"],
     yesResponse: "Och, I'd love to, Lass!!",
-    noResponse: "That's okay, Lass.  Yer worth the wait."
+    noResponse: "Dinnae fash yerself, Lass.  Yer w-worth the wait."
     },
     {name: "Azibo",
     husbandPhoto: "../images/ChibiHusband-Azibo.png",
-    info: ["He's adorable", "He's a family man", "He's can catch dinner... literally"],
+    info: ["He's adorable", "He's a family man", "He can catch dinner... literally"],
     yesResponse: "Yaaay!! When!? When!?",
     noResponse: "*cries*"
     },
     {name: "Tyger",
     husbandPhoto: "../images/ChibiHusband-Tyger.png",
-    info: ["He can cook", "He cleans", "He's your man candy!"],
+    info: ["He can cook", "He can clean", "He's your man candy!"],
     yesResponse: "I knew you would, baby",
     noResponse: "Damn, that's harsh... I'll go eat this cake myself"
     },
@@ -37,7 +37,7 @@ function App() {
     },
     {name: "Aiden",
     husbandPhoto: "../images/ChibiHusband-Aiden.png",
-    info: ["He'll have the royal chefs prepare you anything", "He's a prince", "He will always make you laugh"],
+    info: ["He'll have the royal chef prepare you anything", "He's a prince", "He will always make you laugh"],
     yesResponse: "You had me at 'wedding garter'",
     noResponse: "I bet I could talk you into it still..."
     },
