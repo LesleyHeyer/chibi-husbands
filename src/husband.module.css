@@ -4,6 +4,7 @@
     width: 15vw;
     height: auto;
     display: flex;
+
     border: 1px solid rgb(143, 31, 31);
     border-radius: 25px;
     box-shadow: 2px 2px;
@@ -46,6 +47,12 @@
     font-family: Arial;
     font-size: 14px;
     font-weight: bold;
+  }
+
+  .buttonSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
   }
 
 /* .active {

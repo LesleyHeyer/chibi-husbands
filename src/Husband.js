@@ -70,6 +70,7 @@ const Husband = ({name, images, information, yes, no, husbands, setHusbands}) =>
             <img className={style.husband} src={images} />
             <p>Will You Marry Me?</p>
             <div className="form">
+            <div className={style.buttonSection}>
                     <div className={style.radioButton}>
                     <label for="yes">
                       <input 
@@ -102,9 +103,10 @@ const Husband = ({name, images, information, yes, no, husbands, setHusbands}) =>
                       </button>
                       <br />
                     </div>
+                    </div>
+                    </div>
             <div>
                 {!response ? '' : <p className={style.response}>His Answer: {response} </p> }
-            </div>
             </div>
             <br/>
         </div>
