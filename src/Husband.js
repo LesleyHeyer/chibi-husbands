@@ -50,10 +50,10 @@ const Husband = ({name, images, information, yes, no, husbands, setHusbands}) =>
     );
 
     if(radioButtonChoice === "yes"){
-      window.alert('you pressed yes');
+      window.alert('No going back now!');
       setResponse(yes);
     } else {
-        window.alert("you pressed no");
+        window.alert("Are you serious?");
         setResponse(no);
     } 
   };
@@ -68,7 +68,7 @@ const Husband = ({name, images, information, yes, no, husbands, setHusbands}) =>
               ))}
             </ol>
             <img className={style.husband} src={images} />
-            <p>Would You Marry Him?</p>
+            <p>Will You Marry Me?</p>
             <div className="form">
                     <div className={style.radioButton}>
                     <label for="yes">
@@ -98,12 +98,12 @@ const Husband = ({name, images, information, yes, no, husbands, setHusbands}) =>
                       className={style.submitButton} 
                       type="submit" 
                       onClick={(e) => (formSubmit(e))}>
-                        Will he say yes?
+                        Ask Him!
                       </button>
                       <br />
                     </div>
             <div>
-                <p>His Answer : {response}</p> 
+                {!response ? '' : <p className={style.response}>His Answer: {response} </p> }
             </div>
             </div>
             <br/>

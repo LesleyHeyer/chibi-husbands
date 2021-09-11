@@ -59,11 +59,11 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div>
      <header className="titleimg">
        <img src='./images/ChibiHusbands-Title.png' />
     </header> 
-    <body>
+    <body className="App">
       <div className="husbandContainer">
       {husbands.map(husband => (
          <Husband 

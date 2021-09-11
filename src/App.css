@@ -1,6 +1,8 @@
   
 .App{
   background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  display: flex;
+  justify-content: center;
 }
 
 
